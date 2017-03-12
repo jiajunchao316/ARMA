@@ -1,4 +1,4 @@
-# -*- coding: cp936 -*-
+# -*- coding: utf-8 -*-
 import numpy as np
 from pylab import*
 mpl.rcParams['font.sans-serif'] = ['SimHei']
@@ -22,14 +22,14 @@ class modle(object):
         self.H = np.matrix([[1,1,0,0]])
         self.I = np.eye(4)
         self.z = []
-        self.sf = open('”≈µ„3.txt','w')
+        self.sf = open('‰ºòÁÇπ3.txt','w')
         self.readfile()
 
     def draw(self):
         plot(self.z,'k-',label='noisy measurements')     
         plot(self.result,'r-')
         #ylim(-0.8,0.6)
-        ylabel(u'Œ±æ‡/m')
+        ylabel(u'‰º™Ë∑ù/m')
         plt.show()
 
     def KF(self,r):
@@ -46,7 +46,7 @@ class modle(object):
         self.sf.write('%0.4f'%float(self.xhat[0])+'\n')
 
     def readfile(self):
-        f = open('µ„3.txt')
+        f = open('ÁÇπ3.txt')
         for d in f:
             r = float(d.strip('\n'))
             self.z.append(float(d.strip('\n')))

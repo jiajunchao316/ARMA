@@ -1,4 +1,4 @@
-# -*- coding: cp936 -*-
+# -*- coding: utf-8 -*-
 #Get the parameter characteristics of the sequence  
 
 import numpy as np
@@ -24,11 +24,11 @@ class ARMA(object):
         self.Rr = np.zeros
 
     def draw(self):
-        xlabel(u'Ê±ÑÓ')
-        ylabel(u'×ÔÏà¹Øº¯Êı')
+        xlabel(u'æ—¶å»¶')
+        ylabel(u'è‡ªç›¸å…³å‡½æ•°')
         axhline(0)
-        plot(self.pk_list,'bo',label = u'×ÔÏà¹Øº¯Êı')
-        plot(self.prk_list,'ro',label = u'Æ«×ÔÏà¹Ø') 
+        plot(self.pk_list,'bo',label = u'è‡ªç›¸å…³å‡½æ•°')
+        plot(self.prk_list,'ro',label = u'åè‡ªç›¸å…³') 
         plt.show()
 
     def characteristic_par(self):
@@ -83,7 +83,7 @@ class ARMA(object):
             self.prk_list[i][i] = (self.pk_list[i]-dat_t)/(1-dat_b)
             for k in xrange(1,i):
                 self.prk_list[i][k] = self.prk_list[i-1][k]-self.prk_list[i][i]*self.prk_list[i-1][i-k]
-        print 'Æ«×ÔÏà¹Ø²ÎÊı¾ØÕó\n',self.prk_list
+        print 'åè‡ªç›¸å…³å‚æ•°çŸ©é˜µ\n',self.prk_list
         '''
 
         m = np.zeros((k-1,k-1))
@@ -124,7 +124,7 @@ class ARMA(object):
         
 
             
-f = open('Îó²î1.txt')
+f = open('è¯¯å·®1.txt')
 for d in f:
     data_list.append(float(d.strip('\n').split()[0]))
 f.close()

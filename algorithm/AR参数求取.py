@@ -1,9 +1,9 @@
-# -*- coding: cp936 -*-
+# -*- coding: utf-8 -*-
 import numpy as np
 import pylab
 
 xulie_list = []
-xulie_file = open('AR–Ú¡–.txt')
+xulie_file = open('ARÂ∫èÂàó.txt')
 for e in xulie_file:
     xulie_list.append(float(e.strip('\n')))
 xulie_file.close()

@@ -1,8 +1,8 @@
-# -*- coding: cp936 -*-
+# -*- coding: utf-8 -*-
 import numpy as np
 
 xulie_list = []
-xulie_file = open('Îó²î2.txt')
+xulie_file = open('è¯¯å·®2.txt')
 for e in xulie_file:
     xulie_list.append(float(e.strip('\n')))
 xulie_file.close()
